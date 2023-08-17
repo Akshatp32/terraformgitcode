@@ -61,26 +61,6 @@ variable "subnet2_cidrblock" {
   type        = string
   default     = "10.0.2.0/24"
 }
-variable "subnet3_cidrblock" {
-  description = "set subnet2 cidr block ip"
-  type        = string
-  default     = "10.0.3.0/24"
-}
-variable "subnet4_cidrblock" {
-  description = "set subnet2 cidr block ip"
-  type        = string
-  default     = "10.0.4.0/24"
-}
-variable "subnet5_cidrblock" {
-  description = "set subnet2 cidr block ip"
-  type        = string
-  default     = "10.0.5.0/24"
-}
-variable "subnet6_cidrblock" {
-  description = "set subnet6 cidr block ip"
-  type        = string
-  default     = "10.0.6.0/24"
-}
 
 variable "public_rt" {
   description = "set the public route table cidr block"
@@ -88,62 +68,3 @@ variable "public_rt" {
   default     = "0.0.0.0/0"
 }
 
-variable "ingress_sg" {
-  description = "enter value of you security group"
-  type        = map(any)
-  default = {
-    "22"  = ["0.0.0.0/0"]
-    "80"  = ["0.0.0.0/0"]
-    "443" = ["0.0.0.0/0"]
-    "0"   = ["0.0.0.0/0"]
-  }
-}
-
-variable "egress_sg" {
-  description = "enter value of you security group"
-  type        = map(any)
-  default = {
-    "22"  = ["0.0.0.0/0"]
-    "80"  = ["0.0.0.0/0"]
-    "443" = ["0.0.0.0/0"]
-    "0"   = ["0.0.0.0/0"]
-  }
-}
-
-variable "users" {
-  description = "lsit of IAM users"
-  type        = list(any)
-  default     = ["Aki", "Sam", "Mike"]
-}
-
-variable "username" {
-  description = "set the username"
-  type        = string
-}
-
-variable "password" {
-  description = "set the password"
-  type        = string
-}
-variable "database" {
-  description = "create database"
-  type        = string
-}
-/*
-locals {
-  instance1_id = aws_instance.instance1.id
-  instance2_id = aws_instance.instance2.id
-}
-
-variable "instance1" {
-  description = "Description of instance1 variable"
-  type        = string
-  default     = local.instance1_id
-}
-
-variable "instance2" {
-  description = "Description of instance2 variable"
-  type        = string
-  default     = local.instance2_id
-}
-*/
