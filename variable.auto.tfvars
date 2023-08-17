@@ -1,5 +1,5 @@
-access_key        = "AKIAQV5ZXUAPTMAHCV2L"
-secret_key        = "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"
+access_key        = "AKIAQV5ZXUAPZZYB4SFW"
+secret_key        = "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"
 region_Name       = "ap-south-1"
 server_instance   = "t2.micro"
 instance_ami      = "ami-0d13e3e640877b0b9"
